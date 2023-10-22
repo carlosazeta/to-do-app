@@ -1,0 +1,158 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.page {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  max-width: 100%;
+  word-wrap: break-word;
+  margin-bottom: 2;
+}
+
+.task-data {
+  flex: 1;
+  overflow-wrap: break-word;
+  text-align: left;
+  max-width: 90%;
+  margin-left: 4%;
+  line-height: 2;
+  font-family: monospace, system-ui;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: .4px;
+}
+
+.tasklist-container .list{
+  padding: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+.task-button {
+  margin-right: 2%;
+  width: 32px;
+  height: 32px;
+  background-image: url('./icons/icons8-basura.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.input-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+  margin-bottom: 40px;
+}
+
+.input {
+  --input-focus: #cac4b9;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.input:focus {
+  border: 2px solid var(--input-focus);
+}
+
+.button {
+  --main-focus: #2d8cf0;
+  --font-color: #323232;
+  --bg-color-sub: #dedede;
+  --bg-color: #fff;
+  --main-color: #323232;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(22px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+
+.button:hover {
+  background: var(--bg-color);
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}
